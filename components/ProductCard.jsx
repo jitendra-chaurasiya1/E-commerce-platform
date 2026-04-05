@@ -12,10 +12,8 @@ const ProductCard = ({ product }) => {
     router.push(`/product/${product._id}`);
     window.scrollTo(0, 0);
   };
-
-  // ✅ Buy now button (prevent outer click)
   const handleBuyNow = (e) => {
-    e.stopPropagation(); // 👈 outer card click को रोकता है
+    e.stopPropagation(); // 
     router.push(`/product/${product._id}`);
     window.scrollTo(0, 0);
   };
@@ -36,7 +34,7 @@ const ProductCard = ({ product }) => {
         />
 
         <button
-          onClick={(e) => e.stopPropagation()} // ❤️ icon pe bhi click se route na ho
+          onClick={(e) => e.stopPropagation()} //  icon pe bhi click se route na ho
           className="absolute top-2 right-2 bg-white p-2 rounded-full shadow-md"
         >
           <Image

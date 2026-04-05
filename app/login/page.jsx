@@ -11,14 +11,16 @@ export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Demo login: hardcoded check
-    if (email === "Jitendra705821@gmail.com" && password === "j12345") {
-      localStorage.setItem("isLoggedIn", "true"); // Login state save
-      alert("Login successful!");
-      router.push("/"); // Redirect to home
-    } else {
-      alert("Invalid email or password");
+    if (!email || !password) {
+      alert("Please enter email and password");
+      return;
     }
+
+    // 🔓 Allow login for ANY email and ANY password
+    localStorage.setItem("isLoggedIn", "true");
+    localStorage.setItem("userEmail", email); // optional: save email
+    alert("Login successful!");
+    router.push("/");
   };
 
   return (

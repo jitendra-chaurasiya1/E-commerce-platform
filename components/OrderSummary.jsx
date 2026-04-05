@@ -13,7 +13,7 @@ const OrderSummary = () => {
   const [promoCode, setPromoCode] = useState("");
   const [discount, setDiscount] = useState(0);
 
-  // ✅ यहाँ तुम्हारा address डाला गया और default selected भी किया गया
+  // ✅ 
   const fetchUserAddresses = async () => {
     const myAddress = {
       fullName: "CCSU Meerut University",

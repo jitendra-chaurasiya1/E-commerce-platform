@@ -6,28 +6,26 @@ const NewsLetter = () => {
   const [message, setMessage] = useState("");
 
   const handleSubscribe = () => {
-    // अगर खाली है
+  
     if (!email.trim()) {
       setMessage("⚠️ Please enter a valid email address.");
       return;
     }
 
-    // LocalStorage से पुराने subscriber list लो
+    // 
     const subscribers = JSON.parse(localStorage.getItem("subscribers") || "[]");
 
-    // पहले से मौजूद है क्या?
+    //
     if (subscribers.includes(email)) {
       setMessage("✅ You are already subscribed!");
       return;
     }
-
-    // नया email add करो
     subscribers.push(email);
     localStorage.setItem("subscribers", JSON.stringify(subscribers));
 
-    // Success message दिखाओ
+    // Success message 
     setMessage("🎉 Thank you for subscribing!");
-    setEmail(""); // input साफ कर दो
+    setEmail(""); // input
   };
 
   return (

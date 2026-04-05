@@ -5,11 +5,11 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
 const OrderPlaced = () => {
-  const router = useRouter() // ✅ सही तरीका
+  const router = useRouter() 
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.push('/my-orders') // ✅ अब सही redirect होगा
+      router.push('/my-orders') //  redirect 
     }, 5000)
 
     return () => clearTimeout(timer)

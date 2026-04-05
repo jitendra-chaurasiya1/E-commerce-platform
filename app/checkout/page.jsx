@@ -11,7 +11,7 @@ export default function Checkout() {
   const handlePlaceOrder = async () => {
     setIsPlacingOrder(true);
 
-    // 🧠 LocalStorage में orders save करना
+    // 🧠 LocalStorage in orders save 
     const orders = JSON.parse(localStorage.getItem("userOrders") || "[]");
 
     const newOrder = {
